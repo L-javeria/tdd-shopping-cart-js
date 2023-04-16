@@ -4,4 +4,6 @@ module.exports = class Item {
     this.price = price
     this.onSale = onSale
   }
+
+  
 }
