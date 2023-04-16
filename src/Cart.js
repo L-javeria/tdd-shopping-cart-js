@@ -1,7 +1,7 @@
 module.exports = class Cart {
     constructor(totalPrice, items){
-        this.totalPrice = totalPrice
-        this.items = items 
+        this.totalPrice = 0
+        this.items = []
     }
 
 
