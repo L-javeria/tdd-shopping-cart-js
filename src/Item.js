@@ -5,5 +5,4 @@ module.exports = class Item {
     this.onSale = onSale
   }
 
-  
 }
