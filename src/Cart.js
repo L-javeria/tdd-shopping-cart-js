@@ -12,4 +12,11 @@ module.exports = class Cart {
         this.items.push(product_item);
         this.totalPrice =+ (product_item.product.price) * (product_item.quantity);
     }
+
+    itemQuantities(){
+        return this.items.map((product_item => {
+            return `${product_item.product.name} - x${product_item.quantity}`;
+        })
+        )
+    }
 }
