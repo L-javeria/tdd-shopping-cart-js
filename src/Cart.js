@@ -10,6 +10,6 @@ module.exports = class Cart {
             quantity : quantity 
         }
         this.items.push(product_item);
-        this.totalPrice =+ product_item.product.price * product_item.quantity;
+        this.totalPrice =+ (product_item.product.price) * (product_item.quantity);
     }
 }

@@ -21,4 +21,19 @@ describe('Cart', () => {
         expect(cart.totalPrice).to.be.equal(3000)
     })
 
+    //3rd Test Case
+    it('should show Number of Items', () => {
+        const cart = new Cart()
+
+        const item1 = new Item ('Handbag', 1500, true)
+        const item2 = new Item ('Watch', 2000, false)
+        cart.addItem(item1, 2)
+        cart.addItem(item2, 4)
+        
+        expect(cart.itemQuantities()).to.deep.equal([
+            'Handbag - x2', 
+            'Watch - x4'
+        ])
+    })
+
 })
