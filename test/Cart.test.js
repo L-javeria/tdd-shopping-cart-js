@@ -63,4 +63,20 @@ describe('Cart', () => {
             expect(cart.totalPrice).to.be.equal(80500)
         })
 
+        //6th Test Case
+        it('should include only the item on sale', () => {
+            const cart =new Cart();
+            const item1 = new Item ('Handbag', 500, true)
+            const item2 = new Item ('Watch', 40000, true)
+            const item3 = new Item ('Bangle', 300, false)
+    
+            cart.addItem(item1, 1)
+            cart.addItem(item2, 2)
+    
+            expect(cart.onSaleItems()).to.deep.equal([
+                'Handbag x1 - $250',  
+                'Watch x2 - $20000'
+            ]);
+        }) 
+
 })
