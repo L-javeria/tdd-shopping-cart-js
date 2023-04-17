@@ -60,7 +60,7 @@ describe('Cart', () => {
             cart.addItem(item1, 1)
             cart.addItem(item2, 2)
             
-            expect(cart.totalPrice).to.deep.equal(80500)
+            expect(cart.totalPrice).to.be.equal(80500)
         })
 
 })
