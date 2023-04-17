@@ -19,5 +19,10 @@ module.exports = class Cart {
         })
         )
     }
-    
+
+    itemizedList(){
+        return this.items.map(product_item => {
+            return `${product_item.product.name} x${product_item.quantity} - $${product_item.product.price}`
+        })
+    }
 }

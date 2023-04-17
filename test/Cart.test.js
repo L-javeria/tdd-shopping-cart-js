@@ -34,6 +34,7 @@ describe('Cart', () => {
             'Handbag - x2', 
             'Watch - x4'
         ])
+    })
 
         //4th Test Case
         it('should show quantity and price', () => {
@@ -50,6 +51,6 @@ describe('Cart', () => {
                 'Watch x2 - $40000'
             ])
         })
-    })
+    
 
 })
