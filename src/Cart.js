@@ -25,5 +25,13 @@ module.exports = class Cart {
             return `${product_item.product.name} x${product_item.quantity} - $${product_item.product.price}`
         }) 
     }
-    
+
+    onSaleItems(){
+
+        let SaleFilter = this.items.filter(product_item => product_item.product.onSale)
+        let result = SaleFilter.map(product_item =>  {
+            return `${product_item.product.name} x${product_item.quantity} - $${((product_item.product.price) / 2)}`;
+    })
+        return result;
+    }
 }
