@@ -34,6 +34,22 @@ describe('Cart', () => {
             'Handbag - x2', 
             'Watch - x4'
         ])
+
+        //4th Test Case
+        it('should show quantity and price', () => {
+            const cart = new Cart()
+    
+            const item1 = new Item ('Handbag', 500, true)
+            const item2 = new Item ('Watch', 40000, false)
+            const item3 = 
+            cart.addItem(item1, 1)
+            cart.addItem(item2, 2)
+            
+            expect(cart.itemizedList()).to.deep.equal([
+                'Handbag x1 - $500', 
+                'Watch x2 - $40000'
+            ])
+        })
     })
 
 })
