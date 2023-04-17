@@ -16,7 +16,7 @@ describe('Cart', () => {
     it('should show the added item', () => {
         const cart = new Cart()
 
-        const item1 = new Item ('Handbag', 1500, true)
+        const item1 = new Item ('Handbag', 1500, false)
         cart.addItem(item1, 2)
         expect(cart.totalPrice).to.be.equal(3000)
     })
